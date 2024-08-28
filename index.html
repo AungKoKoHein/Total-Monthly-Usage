@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Usage Record</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab active" data-month="0">January</button>
+        <button class="tab" data-month="1">February</button>
+        <button class="tab" data-month="2">March</button>
+        <button class="tab" data-month="3">April</button>
+        <button class="tab" data-month="4">May</button>
+        <button class="tab" data-month="5">June</button>
+        <button class="tab" data-month="6">July</button>
+        <button class="tab" data-month="7">August</button>
+        <button class="tab" data-month="8">September</button>
+        <button class="tab" data-month="9">October</button>
+        <button class="tab" data-month="10">November</button>
+        <button class="tab" data-month="11">December</button>
+    </div>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+            <div class="daily-usage-container">
+                <h2>Daily Usage:</h2>
+                <ul id="dailyUsageList"></ul>
+            </div>
+        </div>
+        <div class="form-container">
+            <h1>Add Record</h1>
+            <div class="form-group">
+                <input type="text" id="description" placeholder="Description">
+                <input type="number" id="amount" placeholder="Amount">
+                <select id="category">
+                    <option value="Food">Food</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Cosmetic">Cosmetic</option>
+                    <option value="General">General</option>
+                </select>
+                <button id="addRecord">Add Record</button>
+            </div>
+            <ul id="recordList"></ul>
+            <h2>Total Usage: <span id="totalUsage">0 MMK</span></h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="script.js"></script>
+</body>
+</html>
